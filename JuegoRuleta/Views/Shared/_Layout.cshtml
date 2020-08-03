@@ -1,0 +1,80 @@
+﻿@model Usuario
+<!DOCTYPE html>
+<html lang="en" class="PersonalBody">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - JuegoRuleta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--para manejo de iconos-->
+    <script src="https://kit.fontawesome.com/3b907b6b70.js" crossorigin="anonymous"></script>
+    <!--animate css manejo de amiacion-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body background="imagenes/Roulettes.jpg">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">Play of Roulette</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <!--#if user}}  if (TempData.Peek("Email") != null)-->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Transactions
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="NewRoulete">Create a Roulette</a>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="OpenRouletes">Open a Roulette</a>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="AllRoulette">Bet on a Roulette</a>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="CloseRouletes">Close a Roulete</a>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="ListBets">List Of Roulettes</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link " asp-area="" asp-controller="Home" asp-action="SignIn">SignIn</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " asp-area="" asp-controller="Usuarios" asp-action="Index">SignUp</a>
+                                </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            <Footer>
+                <h1>Wellcome play Of Roulette</h1>
+            </Footer>
+            @RenderBody()
+        </main>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

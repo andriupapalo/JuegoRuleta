@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>New Roulette</title>
+</head>
+<body>
+    -<div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3>Add New Roulete</h3>
+            </div>
+            <div class="card-body">
+                <h1>hellow </h1>
+                <form asp-action="NewRoulete" asp-controller="home" method="POST">
+                    <div class="form-group">
+                        <input type="Text" name="name" placeholder="Name Or Roulette" class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="description" class="form-control" placeholder="descripcion"></textarea>
+                    </div>
+                    @*@Html.CheckBox("estado")*@
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block btn-success" type="submit">save</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

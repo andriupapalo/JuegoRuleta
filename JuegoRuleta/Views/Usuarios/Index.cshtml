@@ -1,0 +1,71 @@
+﻿@model Usuario
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clientes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--para manejo de iconos-->
+    <script src="https://kit.fontawesome.com/3b907b6b70.js" crossorigin="anonymous"></script>
+    <!--animate css manejo de amiacion-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card animated animated flipInY">
+                <div class="card-header"> <h4>Managment Users </h4></div>
+                <div class="card-body">
+                    <form asp-action="Usuarios" Asp-controller="Usuarios" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label name="Name" class="control-label"></label>
+                            <input name="NamE" type="text" class="form-control" placeholder="name"
+                                   value="" autofocus>
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label name="Email" class="control-label"></label>
+                            <input asp-for="Email" type="text" class="form-control" placeholder="Email"
+                                   value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label name="password" class="control-label"></label>
+                            <input asp-for="Password" type="password" class="form-control" placeholder="password"
+                                   value="">
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label name="Confirm_Password" class="control-label"></label>
+                            <input asp-for="Confirm_Password" type="password" class="form-control" placeholder="Confirm_Password"
+                                   value="">
+                            <span asp-validation-for="Confirm_Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label name="credit" class="control-label"></label>
+                            <input asp-for="Credit" type="number" class="form-control"  placeholder="Credit Limit"
+                                   value=0>
+                            <span asp-validation-for="Credit" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-block" type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

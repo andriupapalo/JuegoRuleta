@@ -1,0 +1,72 @@
+﻿@model numerorul
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Bet </title>
+    <h4 class="card-title d-flex justify-content-between align-items-center">
+        @ViewBag.name
+    </h4>
+</head>
+<body>
+    <form asp-action="Bet" asp-controller="home" method="post">
+
+        <div class="row">
+            @for (int i = 1; i < 37; i++)
+            {
+                <div class="col-md-2">
+                    <div class="card p-2">
+                        <div class="card-body p-md-2">
+                            <div class="form-group">
+                                <p>Num:@i  </p> @Html.CheckBox("Ch" + i)
+                            </div>
+                            <input type="hidden" name="Ch" +i />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="card p-2">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <p>Negro : </p> @Html.CheckBox("Cn")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="card p-2">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <p>Rojo :  </p> @Html.CheckBox("Cr")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <p>Vlr Apostado : </p> <input type="number" id="valorapostado" name="valorapostado" min="1" max="10000" step="0.5" />
+            </div>
+        </div>
+        <input type="hidden" name="name" value="@ViewBag.name" />
+        <input type="hidden" name="id" value="@ViewBag.id" />
+        <input type="hidden" name="email" value="@ViewBag.EmailUsuario" />
+
+        <div class="form-group">
+            <button class="btn btn-primary btn-block btn-success" type="submit">Play</button>
+        </div>
+    </form>
+</body>
+</html>

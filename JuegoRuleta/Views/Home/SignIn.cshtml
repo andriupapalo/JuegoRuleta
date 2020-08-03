@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - SignIn</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+              integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!--para manejo de iconos-->
+        <script src="https://kit.fontawesome.com/3b907b6b70.js" crossorigin="anonymous"></script>
+        <!--animate css manejo de amiacion-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
+        <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body background="imagenes/Roulettes.jpg">
+    <div class="row">
+        <div class="card col-md-5 mx-auto animated flipInY">
+            <div class="card mt-4 text-center">
+                <div class="card-header">
+                    <h4>Registro de Usuario</h4>
+                </div>
+                <img src="/img/sdi.jpg" class="rounded-circle mx-auto d-block m-4 logo" alt="">
+                <div class="card-body">
+                    <form asp-action="SignIn" asp-controller="home" method="POST">
+                        <div class="form-group">
+                            <input type="email" name="EmailUsuario" class="form-control" placeholder="email" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="PasswordUsuario" class="form-control" placeholder="password">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-block" type="submit">Ingresar </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

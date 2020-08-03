@@ -1,0 +1,118 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+.PersonalBody {
+    background: #74ebd5; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background: #36D1DC; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.incluir {
+    position: relative;
+}
+
+    .incluir input {
+        -webkit-appearance: none;
+        -moz-appearance: window;
+        -ms-appearance: window;
+        appearance: window;
+        position: absolute;
+        top: 0;
+        width: 50px;
+        height: 50px;
+    }
+
+        .incluir input + label::before {
+            position absolute;
+            top: 0;
+            display: inline-block;
+            background: transparent url('https://demos.devexpress.com/ASPxEditorsDemos/ASPxCheckBox/Images/Unchecked.png') no-repeat 0 0;
+            display: block;
+            width: 50px;
+            height: 50px;
+            content: '';
+            vertical-align: middle;
+        }
+
+        .incluir input:checked + label::before {
+            background: transparent url('https://demos.devexpress.com/ASPxEditorsDemos/ASPxCheckBox/Images/Checked.png') no-repeat 0 0;
+        }
+
+.circulo {
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #5cb85c;
+}

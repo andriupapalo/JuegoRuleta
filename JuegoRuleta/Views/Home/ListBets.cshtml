@@ -1,0 +1,66 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List of Roulettes</title>
+</head>
+
+
+<!-- On rows
+<tr class="table-active">...</tr>
+
+<tr class="table-primary">...</tr>
+<tr class="table-secondary">...</tr>
+<tr class="table-success">...</tr>
+<tr class="table-danger">...</tr>
+<tr class="table-warning">...</tr>
+<tr class="table-info">...</tr>
+<tr class="table-light">...</tr>
+<tr class="table-dark">...</tr>
+
+< On cells (`td` or `th`) 
+<tr>
+    <td class="table-active">...</td>
+
+    <td class="table-primary">...</td>
+    <td class="table-secondary">...</td>
+    <td class="table-success">...</td>
+    <td class="table-danger">...</td>
+    <td class="table-warning">...</td>
+    <td class="table-info">...</td>
+    <td class="table-light">...</td>
+    <td class="table-dark">...</td>
+</tr>
+-->
+<body>
+    <form asp-action="/" asp-controller="home" method="post">
+        <table class="table-bordered">
+            <tr class="table-active">
+                <th>Customer</th>
+                <th>Roulette</th>
+                <th>Colors</th>
+                <th>Numbers</th>
+                <th>Bet Value</th>
+            </tr>
+            @for (int i = 0; i < ViewBag.ruletas.Count; i++)
+            {
+                <tr class="table-active">
+                    <td class="table-info">@ViewBag.ruletas[i].cliente.ToString()</td>
+                    <td class="table-info">@ViewBag.ruletas[i].ruleta.ToString()</td>
+                    <td class="table-info">@ViewBag.ruletas[i].colores.ToString()</td>
+                    <td class="table-info">@ViewBag.ruletas[i].numeros.ToString()</td>
+                    <td class="table-info">@ViewBag.ruletas[i].valorApostado.ToString()</td>
+                </tr>
+            }
+        </table>
+        <div class="form-group">
+            <button btn btn-primary btn-block btn-success asp-action="MenuPrincipal" asp-controller="home" type="submit">Come Back</button>
+        </div>
+</form>
+</body>
+</html>
